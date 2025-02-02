@@ -13,7 +13,7 @@ const AllBlogsCard = ({ blog }) => {
       category: blog.category,
     };
 
-    fetch('http://localhost:5000/watchList', {
+    fetch('https://assignment-11-blogside-server.vercel.app/watchList', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -29,7 +29,7 @@ const UpdateBlog = () => {
       console.log("Updating Blog with ID:", blog._id); // Debugging
       console.log("Payload:", updatedBlog);
   
-      const response = await fetch(`http://localhost:5000/blogs/${blog._id}`, {
+      const response = await fetch(`https://assignment-11-blogside-server.vercel.app/blogs/${blog._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -26,7 +26,7 @@ const Router = createBrowserRouter([
         {
             path:'/',
             element:<Homepage></Homepage>,
-            loader: () => fetch('http://localhost:5000/blogs')
+            loader: () => fetch('https://assignment-11-blogside-server.vercel.app/blogs')
         }
     ],
     
@@ -42,17 +42,17 @@ element:<ErrorPage></ErrorPage>
   {
     path:'/update-blog/:id',
     element:<UpdateBlog></UpdateBlog>,
-    loader: ({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`)
+    loader: ({ params }) => fetch(`https://assignment-11-blogside-server.vercel.app/blogs/${params.id}`)
   },
   {
     path: '/all-blogs',
     element: <AllBlog></AllBlog>,
-    loader: () => fetch('http://localhost:5000/blogs')
+    loader: () => fetch('https://assignment-11-blogside-server.vercel.app/blogs')
   },
   {
     path: '/blogs/:id',
     element: <BlogDetails></BlogDetails>,
-    loader:({params})=>fetch(`http://localhost:5000/blogs/${params.id}`)
+    loader:({params})=>fetch(`https://assignment-11-blogside-server.vercel.app/blogs/${params.id}`)
     
   },
   {
@@ -64,7 +64,7 @@ element:<ErrorPage></ErrorPage>
   {
     path: '/wishlist',
     element: <PrivateRoute><WishlistedBlogs></WishlistedBlogs></PrivateRoute>,
-   loader:()=>fetch('http://localhost:5000/blogs')
+   loader:()=>fetch('https://assignment-11-blogside-server.vercel.app/blogs')
     
     
   },

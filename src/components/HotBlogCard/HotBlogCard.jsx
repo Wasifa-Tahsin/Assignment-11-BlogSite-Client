@@ -42,7 +42,7 @@ const HotBlogCard = ({ blog }) => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/watchList', {
+      const response = await fetch('https://assignment-11-blogside-server.vercel.app/watchList', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(watchlistData),

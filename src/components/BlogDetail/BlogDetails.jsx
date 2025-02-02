@@ -17,7 +17,7 @@ const BlogDetails = () => {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/comments/${blog._id}`);
+        const response = await fetch(`https://assignment-11-blogside-server.vercel.app/comments/${blog._id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch comments");
         }
@@ -49,7 +49,7 @@ const BlogDetails = () => {
       //   createdAt: new Date(),
       // };
 
-      const response = await fetch("http://localhost:5000/comments", {
+      const response = await fetch("https://assignment-11-blogside-server.vercel.app/comments", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(comment),

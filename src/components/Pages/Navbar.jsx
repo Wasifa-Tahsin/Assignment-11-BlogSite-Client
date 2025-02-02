@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
+  console.log(import.meta.env.VITE_a);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
 const navigate=useNavigate()
@@ -179,7 +180,7 @@ const navigate=useNavigate()
             </li>
             <li>
               <Link
-                to="/add-blog"
+                to="/addBlog"
                 className="block hover:text-indigo-600 transition"
                 onClick={toggleMenu}
               >

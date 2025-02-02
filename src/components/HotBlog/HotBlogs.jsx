@@ -4,7 +4,7 @@ import HotBlogCard from '../HotBlogCard/HotBlogCard';
 const HotBlogs = () => {
     const [blog,setBlog]=useState([])
     useEffect(()=>{
-     fetch('http://localhost:5000/sixBlogs')
+     fetch('https://assignment-11-blogside-server.vercel.app/sixBlogs')
      .then(res=>res.json())
      .then(data=>setBlog(data))
     },[])
